@@ -1,0 +1,115 @@
+/* @theme "base" */
+@import "~/.config/rofi/themes/base.rasi"
+
+
+/* ----------------------------------------- */
+/* WALLPAPER SELECTOR - Override seguro       */
+/* Compatible con base.rasi + preview images  */
+/* ----------------------------------------- */
+
+* {
+    font: "JetBrainsMono Nerd Font Propo 12";
+    background-color: transparent;
+    text-color: @fg0;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+}
+
+/* Ventana */
+window {
+    location: center;
+    width: 1100px;
+    height: 420px;
+    border-radius: 24px;
+    background-color: @bg0;
+    border: 0px;
+    border-color: @bg3;
+}
+
+/* Contenedor */
+mainbox {
+    padding: 24px;
+    children: ["inputbar", "listview"];
+}
+
+/* Inputbar */
+inputbar {
+    background-color: @bg1;
+    border: 2px;
+    border-color: @bg3;
+    border-radius: 16px;
+    padding: 10px 16px;
+    spacing: 10px;
+    children: [prompt, entry];
+}
+
+prompt {
+    text-color: @fg3;
+}
+
+entry {
+    placeholder: "Select wallpaper...";
+    placeholder-color: @fg2;
+}
+
+/* ----------------------------------------- */
+/* LISTVIEW horizontal (override completo)    */
+/* ----------------------------------------- */
+listview {
+   background-color: transparent;
+
+    margin: 18px 0 0;
+    padding: 0px;
+    spacing: 20px;
+
+    border: 0px;
+    border-color: transparent;
+
+    fixed-height: false;
+    scrollbar: false;
+
+    columns: 4;
+    lines: 2;
+}
+
+
+/* ----------------------------------------- */
+/* Tarjetas (override para evitar conflicto)  */
+/* ----------------------------------------- */
+
+element {
+    orientation: vertical;
+    padding: 16px;
+    spacing: 12px;
+    border-radius: 18px;
+    width: 220px;
+    background-color: @bg1;
+}
+
+/* Selección */
+element selected normal,
+element selected active {
+    background-color: @bg3;
+    border: 0px;
+    border-color: @fg1;
+}
+
+/* Preview wallpaper */
+element-icon {
+    size: 160px;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    background-color: transparent;
+}
+
+/* Texto */
+element-text {
+    text-color: @fg1;
+
+    horizontal-align: 0.5;
+    text-align: center;
+
+    background-color: transparent;
+}
+

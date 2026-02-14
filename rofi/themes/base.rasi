@@ -1,0 +1,32 @@
+/* BASE = SOLO COLORES 
+
+* {
+    bg0: #212121CC;
+    bg1: #2A2A2AFF;
+    bg2: #3D3D3DCC;
+    bg3: #616161F2;
+
+    fg0: #E6E6E6;
+    fg1: #FFFFFF;
+    fg2: #969696;
+    fg3: #C2C2C2;
+}
+*/
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+/* Base + Wal */
+
+* {
+    bg0: #212121CC;
+    bg1: #2A2A2AFF;
+    bg2: #3D3D3DCC;
+
+    /* Accent dinámico */
+    bg3: @color1;
+
+    fg0: @foreground;
+    fg1: @foreground;
+    fg2: @color7;
+    fg3: @color6;
+} 

@@ -1,0 +1,194 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Barra principal - Mucho más oscura */
+#waybar {
+    background-color: rgba(10, 10, 12, 0.98);
+    border-radius: 0px;
+    color: #d0d0d0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Módulos generales con fondo oscuro */
+#workspaces,
+#custom-spotify,
+#clock,
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+
+
+#custom-notification,
+#tray {
+    padding: 6px 12px;
+    background-color: rgba(5, 5, 8, 0.7);
+    border-radius: 8px;
+    margin: 4px 2px;
+}
+
+/* Espacios de trabajo */
+#workspaces {
+    padding: 6px 8px;
+    background-color: rgba(5, 5, 8, 0.8);
+}
+
+#workspaces button {
+    padding: 4px 10px;
+    color: #8a8a9a;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background-color: rgba(100, 100, 120, 0.3);
+    color: #b0b0c0;
+}
+
+#workspaces button.active {
+    color: #e0e0e0;
+    background-color: rgba(140, 140, 160, 0.4);
+}
+
+#workspaces button.urgent {
+    color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.2);
+}
+
+/* Módulo de Spotify */
+#custom-spotify {
+    color: #1db954;
+    font-weight: 500;
+    background-color: rgba(5, 5, 8, 0.7);
+    padding: 6px 14px;
+}
+
+#custom-spotify:hover {
+    background-color: rgba(29, 185, 84, 0.15);
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+/* Reloj */
+#clock {
+    color: #e0e0e0;
+    font-weight: 600;
+    padding: 6px 16px;
+    background-color: rgba(5, 5, 8, 0.8);
+}
+
+/* Batería */
+#battery {
+    color: #a8e6cf;
+    background-color: rgba(5, 5, 8, 0.7);
+}
+
+#battery.charging {
+    color: #90ee90;
+    background-color: rgba(10, 30, 10, 0.6);
+}
+
+#battery.warning:not(.charging) {
+    color: #ffd700;
+    background-color: rgba(30, 25, 5, 0.6);
+}
+
+#battery.critical:not(.charging) {
+    color: #ff6b6b;
+    background-color: rgba(30, 5, 5, 0.6);
+}
+
+/* Brillo */
+#backlight {
+    color: #ffe4b5;
+    background-color: rgba(5, 5, 8, 0.7);
+}
+
+/* Red */
+#network {
+    color: #87ceeb;
+    background-color: rgba(5, 5, 8, 0.7);
+}
+
+#network.disconnected {
+    color: #ff6b6b;
+    background-color: rgba(30, 5, 5, 0.6);
+}
+
+/* Audio */
+#pulseaudio {
+    color: #dda0dd;
+    background-color: rgba(5, 5, 8, 0.7);
+}
+
+#pulseaudio.muted {
+    color: #ff6b6b;
+    font-size: 20px;
+    background-color: rgba(30, 5, 5, 0.6);
+}
+
+/* Notificaciones */
+#custom-notification {
+    color: #ffa07a;
+    font-size: 20px;
+    background-color: rgba(5, 5, 8, 0.7);
+}
+
+#custom-notification.notification {
+    color: #ffb347;
+    background-color: rgba(25, 15, 5, 0.6);
+}
+
+#custom-notification.dnd-notification,
+#custom-notification.dnd-none {
+    color: #9c9c9c;
+}
+
+/* System tray */
+#tray {
+    padding: 6px 8px;
+    background-color: rgba(5, 5, 8, 0.7);
+}
+
+#tray > .passive {
+    opacity: 0.7;
+}
+
+#tray > .needs-attention {
+    color: #ff6b6b;
+}
+
+/* Separadores sutiles */
+#workspaces,
+#custom-spotify,
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+#custom-notification {
+    margin-right: 4px;
+}
+
+/* Hover effects */
+#battery:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-notification:hover,
+#clock:hover,
+#tray:hover {
+    background-color: rgba(20, 20, 25, 0.8);
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}

@@ -1,0 +1,7 @@
+@theme "~/.config/rofi/themes/base.rasi"
+
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    icon-theme: "Papirus";
+}

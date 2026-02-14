@@ -1,0 +1,102 @@
+@import "base.rasi"
+
+/* ------------------------------ */
+/* LAUNCHER GRID - Clean + Glass  */
+/* ------------------------------ */
+
+* {
+    font: "JetBrainsMono Nerd Font Propo 11";
+    background-color: transparent;
+    text-color: @fg0;
+}
+
+/* Window */
+window {
+    location: center;
+    width: 900px;
+    border-radius: 26px;
+
+    background-color: @bg0;
+}
+
+/* Main container */
+mainbox {
+    padding: 18px;
+    spacing: 14px;
+    children: [ inputbar, listview ];
+}
+
+/* Search bar */
+inputbar {
+    background-color: @bg1;
+
+    border-radius: 18px;
+    padding: 12px 18px;
+    spacing: 10px;
+
+    border: 2px;
+    border-color: @bg3;
+
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @fg3;
+}
+
+entry {
+    placeholder: "Search apps...";
+    placeholder-color: @fg2;
+    background-color: transparent;
+}
+
+/* Grid */
+listview {
+    columns: 5;
+    lines: 3;
+
+    spacing: 18px;
+    fixed-height: true;
+
+    background-color: transparent;
+}
+
+/* Cards */
+element {
+    orientation: vertical;
+
+    background-color: @bg2;
+    border-radius: 18px;
+
+    padding: 14px;
+    spacing: 8px;
+
+    border: 2px;
+    border-color: transparent;
+}
+
+/* Hover (active) */
+element normal active {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Selected */
+element selected {
+    background-color: @bg3;
+    border-color: @fg1;
+}
+
+/* Icon */
+element-icon {
+    size: 3.2em;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+/* Text */
+element-text {
+    horizontal-align: 0.5;
+    text-align: center;
+    text-color: @fg1;
+}
+
