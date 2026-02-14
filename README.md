@@ -12,7 +12,7 @@ Configuración personal de Arch + Hyprland.
 ## Restaurar configuración
 
 ```bash
-git clone https://github.com/TUUSUARIO/dotfiles.git
+git clone https://github.com/Oatan150522/Dotfiles-ARCH.git
 cd dotfiles
 ./restore.sh
 
